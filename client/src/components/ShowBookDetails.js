@@ -11,7 +11,7 @@ function ShowBookDetails(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/apis/books/${id}`)
+      .get(`/apis/books/${id}`)
       .then((res) => {
         setBook(res.data);
       })
@@ -22,7 +22,7 @@ function ShowBookDetails(props) {
 
   const onDeleteClick = (id) => {
     axios
-      .delete(`http://localhost:8000/apis/books/${id}`)
+      .delete(`/apis/books/${id}`)
       .then((res) => {
         navigate("/");
       })
