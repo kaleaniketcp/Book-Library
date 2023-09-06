@@ -8,7 +8,7 @@ const path = require("path");
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL, { useNewUrlParser: true })
   .then(() => console.log("DB Connection Successful!"))
   .catch((err) => console.log(err));
 
